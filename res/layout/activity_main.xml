@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <View
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/header"
+        android:paddingBottom="50dp"
+        android:paddingLeft="100dp"
+        android:paddingTop="80dp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF" />
+    
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:background="#00617a" />
+
+     <EditText
+         android:id="@+id/arrivee"
+         android:layout_width="120dp"
+         android:layout_height="wrap_content"
+         android:layout_alignBaseline="@+id/editText1"
+         android:layout_alignBottom="@+id/editText1"
+         android:layout_alignParentRight="true"
+         android:layout_marginRight="26dp"
+         android:background="#00617a"
+         android:ems="10"
+         android:gravity="center"
+         android:hint="heure arrivée"
+         android:textColorHint="#0a3f4c"
+         android:paddingBottom="20dp"
+         android:paddingTop="20dp"
+         android:textColor="#FFFFFF" >
+
+     </EditText>
+
+     <CheckBox
+         android:id="@+id/checkBox1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/editText1"
+         android:layout_alignLeft="@+id/editText1"
+         android:layout_marginBottom="25dp"
+         android:text="J'ai moins de 30 ans"
+         android:textColor="#FFFFFF" />
+
+     <EditText
+         android:id="@+id/editText1"
+         android:layout_width="120dp"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@+id/textView1"
+         android:layout_alignParentLeft="true"
+         android:layout_marginBottom="35dp"
+         android:layout_marginLeft="22dp"
+         android:background="#00617a"
+         android:ems="10"
+         android:gravity="center"
+         android:hint="heure départ"
+         android:paddingBottom="20dp"
+         android:paddingTop="20dp"
+         android:textColor="#FFFFFF"
+         android:textColorHint="#0a3f4c" >
+         <requestFocus />
+         </EditText>
+
+     <TextView
+         android:id="@+id/prix"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentLeft="true"
+         android:layout_marginBottom="30dp"
+         android:ems="20"
+         android:gravity="center"
+         android:text="0.00 €"
+         android:textColor="#046a83"
+         android:textSize="40sp" />
+
+     <ImageView
+         android:layout_width="100dp"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/checkBox1"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="10dp"
+         android:src="@drawable/velov" />
+
+     <TextView
+         android:id="@+id/textView2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/prix"
+         android:layout_centerHorizontal="true"
+         android:layout_marginBottom="16dp"
+         android:textColor="#c7c7c7"
+         android:text="Prix de votre location" />
+
+     <Button
+         android:id="@+id/button1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@+id/view1"
+         android:layout_centerHorizontal="true"
+         android:background="#00000000"
+         android:ems="10"
+         android:gravity="center"
+         android:paddingBottom="20dp"
+         android:paddingTop="20dp"
+         android:textColor="#FFFFFF"
+         android:text="Calculer" />
+
+</RelativeLayout>
