@@ -38,9 +38,13 @@ public class MainActivity extends Activity {
 		
 		final Button button = (Button) findViewById(R.id.button1);
         
+		//ACTIVATION PAR LE BOUTON "CALCULER"
 		button.setOnClickListener(new View.OnClickListener() {
 	        public void onClick(View v) {
+	        //test des valeurs entrées par l'utilisateur
+	        	//test si les inputs sont vides
 	        	if(!depart.getText().toString().matches("") && !arrivee.getText().toString().matches("")) {
+	        		//test si les inputs sont des entiers
 	        		if(isInteger(depart.getText().toString()) && isInteger(arrivee.getText().toString())) {	
 	        			Velo utilisateur = new Velo(depart.getText().toString(), arrivee.getText().toString(), checkBox.isChecked());
 	        			prixTag.setText(utilisateur.calculatePrice());
@@ -99,19 +103,20 @@ public class MainActivity extends Activity {
 		arrivee.addTextChangedListener(inputTextWatcher);
 	}*/
 	
+	
+	//fonction de test des entiers
 	public static boolean isInteger(String s) {
 	    try { 
 	        Integer.parseInt(s); 
 	    } catch(NumberFormatException e) { 
 	        return false; 
 	    }
-	    // only got here if we didn't return false
 	    return true;
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
+		//création du menu
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
@@ -119,14 +124,15 @@ public class MainActivity extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    switch(item.getItemId()) {
+	    //menu index -> pointe vers la main view
 	    case R.id.index:
 	        Intent intent = new Intent(this, MainActivity.class);
 	        this.startActivity(intent);
 	        break;
+	    //menu about -> pointe vers une page de crédit
 	    case R.id.about:
 	        Intent intent2 = new Intent(this, AboutActivity.class);
 	        this.startActivity(intent2);
-	        overridePendingTransition(R.anim.rotate_out,R.anim.rotate_in);
 	        break;
 	    default:
 	        return super.onOptionsItemSelected(item);

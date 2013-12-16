@@ -6,13 +6,13 @@ public class Velo {
 	int fin = 0;
 	boolean age = false;
 	
-	
+	//constructeur de la classe
 	public Velo(String getDepart, String getFin, Boolean getAge){
 		this.depart = Integer.parseInt(getDepart);
 		this.fin = Integer.parseInt(getFin);
 		this.age = getAge;
 	}
-	
+	//fonction de calcul du prix
 	public String calculatePrice(){
 		int a = this.depart;
 		int b = this.fin;
@@ -46,11 +46,15 @@ public class Velo {
 				}
 			}
 			
+			//test si l'utilisateur à moins de 30 ans ou plus de 70 ans
 			if(age) {
 				prix = prix * 0.80;
 			}
 			
-			return prix+" €";
+			//On arrondi le prix à 2 décimals
+			double roundPrix = (double) Math.round(prix * 100) / 100;
+			
+			return roundPrix+" €";
 		}
 		
 		else

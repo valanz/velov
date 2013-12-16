@@ -50,7 +50,7 @@
          android:layout_above="@+id/editText1"
          android:layout_alignLeft="@+id/editText1"
          android:layout_marginBottom="25dp"
-         android:text="J'ai moins de 30 ans"
+         android:text="J'ai - de 30 ans ou + de 75 ans"
          android:textColor="#FFFFFF" />
 
      <EditText
